@@ -1,0 +1,34 @@
+<h3 style="color:brown">Add Product</h3>
+<form name="AddProductForm" ng-submit="$ctrl.onFormSubmit($event, AddProductForm)" novalidate>
+    <div>
+        <label for="title">Title</label>
+        <input ng-model="$ctrl.newProduct.title" type="text" name='title' required minlength="3">
+        <span ng-if="AddProductForm.title.$error.required">
+            Required field.
+        </span>
+        <span ng-if="AddProductForm.title.$error.minlength">
+            Minimum length is 3 characters.
+        </span>
+    </div>
+    <br/>
+    <div>
+        <label for="company">Company</label>
+        <input ng-model="$ctrl.newProduct.company" required type="text" name='company'>
+    </div>
+    <br/>
+    <div>
+        <label for="imageUrl">Image Url</label>
+        <input ng-model="$ctrl.newProduct.imageUrl" required type="text" name='imageUrl'>
+    </div>
+    <br/>
+    <!-- <div>
+        <input type="checkbox" ng-model="$ctrl.newProduct.checkbox1" name="Company">Item1
+        <input type="checkbox" ng-model="$ctrl.newProduct.checkbox2" name="Company">Item2
+    </div> -->
+    <br/>
+    <div>
+        <input type="submit" value="Add Product">
+        <input type="reset" value="Reset">
+    </div>
+    {{$ctrl.newProduct}}
+</form>

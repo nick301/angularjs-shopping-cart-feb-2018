@@ -1,0 +1,12 @@
+<h2>Products List</h2>
+<div ng-repeat="prod in $ctrl.products" class="product">
+    <h3 ng-bind="prod.title"></h3>
+    <img width="100" height="100" ng-src="{{prod.imageUrl}}" alt="">
+    <div>
+        <span class="price" ng-bind="prod.price"></span>
+    </div>
+    <div>
+        <a ui-sref="showProductInfo({productId: prod.id})">View Details</a>
+        <button>Add to Cart</button>
+    </div>
+</div>

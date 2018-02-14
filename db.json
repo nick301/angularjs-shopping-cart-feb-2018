@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "iPhone 6",
+      "company": "Apple",
+      "imageUrl": "https://store.storeimages.cdn-apple.com/4974/as-images.apple.com/is/image/AppleInc/aos/published/images/M/KY/MKY12/MKY12_AV1_SPACE_GRAY?wid=1000&hei=1000&fmt=jpeg&qlt=95&op_sharpen=0&resMode=bicub&op_usm=0.5,0.5,0,0&iccEmbed=0&layer=comp&.v=1486508177703"
+    },
+    {
+      "id": 2,
+      "title": "Samsung Galaxy S8",
+      "company": "Samsung",
+      "imageUrl": "https://staticshop.o2.co.uk/product/images/samsung_galaxy_s8_64gb_midnight_black_front_sku_header.png?cb=b1e52dd9252967784a9580c9de7ea7e3"
+    },
+    {
+      "title": "nokia 6600",
+      "company": "Nokia",
+      "imageUrl": "https://i.ytimg.com/vi/nS5KQy8jcKc/maxresdefault.jpg",
+      "id": 3
+    }
+  ]
+}
