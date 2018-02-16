@@ -1,0 +1,98 @@
+ES5 - Current javascript. Currently, this is the standard as declared by W3C.
+ES6 - new javascript. It is not a standard right now.
+
+>>Learn the differences between them.
+
+New features in ES6:
+1. const keyword
+2. let keyword : Its scope is at block level. Eg: let a = 10;
+3. var scope is at the function level.
+4. class keyword.
+Eg: 
+
+class Person{
+	constructor(){ ...... }
+	sayHi(){ .........}
+}
+
+const p = new Person();
+p.sayHi();
+
+5. Inheritance is now allowed in ES6.
+6. Array has been refined. Concept of fat arrow has been introduced.
+EG:
+const arr = [3,4,1,10,20,32,5];
+arr.filter(item => item < 10)
+   .map(item => "item is " + item);
+
+
+Eg: const add => (x,y) = return x + y;
+
+
+----------Angular JS -------------------------
+We need to add 
+ ng-model-options="{ updateOn: 'default blur', debounce: { default: 500, blur: 0 } }"
+to avoid the api call every time asyncronously. We can give delay to the api hit.
+
+Interceptors
+-------------
+
+
+Decorators:
+-----------
+$exceptionHandler, $http - built in angular service.
+$delegate ->Built in Exception handler.
+We can use decorators to build custom exception handlers.
+
+Webpack
+--------
+--It helps in bundling all the js files.
+
+CLI
+----
+Command line interface.
+Helps in project scaffolding.
+
+1. To create a new application folder along with all dependencies.
+>ng new angular5-shopping-cart
+
+2. Change directory
+>cd <to new folder>
+
+3. To launch the application
+> ng serve 
+
+
+karma -> It is test runner tool. Helps in Unit testing.
+Protactor -> It is a end to end testing tool.
+tsconfig -> Configurations for typescript.
+tslint -> Default rules for typescript.
+
+Comparison of Angular5 and AngularJS
+-------------------------------------
+1. Both has concept of modules(like a package).
+2. Both has concept of components.
+3. Both has concept of Services.
+4. Both has concept of Directives.
+
+5. AngularJS is dependent wholly on browser. 
+6. Server side rendering (SSR)
+7.Angular 5 is divided in 
+	Core Layer(Platform independent) and View Layer(Platform dependent)
+8. Ang5 has Native-script feature -> Helps in creating native mobile app.
+9. In Ang5 Data flows down(helps in pin pointing the component) and events flow up. This increases the performance of the application.
+10. > ng g c components/productList -> Creates a new component along with dependencies.
+11. > ng g s app -> Creates a service class automatically in the code and adds it in config files.
+12. 
+
+
+JINTO JOSE
+jintoppy@gmail.com
+Ph - 9035066384
+
+
+
+
+
+
+
