@@ -1,5 +1,5 @@
 /*
-Product service 
+Product service. 
 */
 angular.module('shoppingcart.product')
     .service('ProductService', ['$http', 'AppConstants',
@@ -10,10 +10,17 @@ angular.module('shoppingcart.product')
             };
 
             this.addProducts = function (productDetails) {
-                return $http.post(AppConstants.urls.products,productDetails);
+                return $http.post(AppConstants.urls.products, productDetails);
             };
 
             this.getProductDetails = function (productId) {
                 return $http.get(AppConstants.urls.products + '/' + productId);
             };
+
+            this.searchProduct = function (title) {
+                return $http.get(AppConstants.urls.products + '?title=' + title)
+                    .then(function (result) {
+                        return result.data;
+                    });
+            }
         }]);

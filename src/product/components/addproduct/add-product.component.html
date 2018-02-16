@@ -2,13 +2,31 @@
 <form name="AddProductForm" ng-submit="$ctrl.onFormSubmit($event, AddProductForm)" novalidate>
     <div>
         <label for="title">Title</label>
-        <input ng-model="$ctrl.newProduct.title" type="text" name='title' required minlength="3">
+
+        <input 
+        ng-model="$ctrl.newProduct.title" 
+        type="text" 
+        name='title' 
+        prod-title
+        prod-availability
+        ng-model-options="{ updateOn: 'default blur', debounce: { default: 500, blur: 0 } }"
+        required 
+        minlength="3">
+
+        <!--Validation messages -->
+        <span ng-if="AddProductForm.title.$error.prodAvailability">
+            Product title already exist.
+        </span>
+        <span ng-if="AddProductForm.title.$error.prodTitle">
+            Should not start with a.
+        </span>
         <span ng-if="AddProductForm.title.$error.required">
             Required field.
         </span>
         <span ng-if="AddProductForm.title.$error.minlength">
             Minimum length is 3 characters.
         </span>
+
     </div>
     <br/>
     <div>
@@ -30,5 +48,4 @@
         <input type="submit" value="Add Product">
         <input type="reset" value="Reset">
     </div>
-    {{$ctrl.newProduct}}
 </form>
